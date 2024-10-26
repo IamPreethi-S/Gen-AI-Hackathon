@@ -1,0 +1,469 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+.main-title {
+    color: #e5ccc9;
+    
+    font-size: 42px;
+    text-align: center;
+}
+
+[data-testid='stSidebar'] [data-testid='stHeading'] h1 {
+    color: #e5ccc9;
+    font-family: "Poiret One", sans-serif;
+    font-size: 46px;
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+[data-testid='stHeading'] h1 {
+    color: #b7c439;
+    font-size: 52px;
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+[data-testid='stHeading'] h1 span {
+    display: none;
+}
+
+.title-subtext {
+    color: #ffcca3;
+    font-size: 21px;
+    text-align: center;
+}
+
+.stTextInput p {
+    color: #c6e5ff;
+    font-size: 17px;
+    padding: 4px 0 6px;
+}
+
+.stTextArea p {
+    color: #c6e5ff;
+    font-size: 17px;
+    padding: 4px 0 6px;
+}
+
+.stSelectbox p {
+    color: #c6e5ff;
+    font-size: 17px;
+    padding: 4px 0 6px;
+}
+
+.stMultiSelect p {
+    color: #c6e5ff;
+    font-size: 17px;
+    padding: 4px 0 6px;
+}
+
+.input-example {
+    color: gray;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.multiselect-pretext {
+    color: #efe386;
+    font-size: 25px;
+    text-align: center;
+}
+
+.btn-separator {
+    margin: 10px 0 20px;
+}
+
+.output-title {
+    color: #75dada;
+    font-size: 52px;
+    margin-top: 32px;
+}
+
+[data-testid='stHeading'] h3 {
+    color: #efe386;
+}
+
+.highlight-text {
+    color: #7fc5f0;
+    font-weight: 600;
+    font-style: italic;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 10;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    [data-testid='stHeading'] h1 {
+        font-size: 36px;
+    }
+
+    .title-subtext {
+        font-size: 19px;
+    }
+
+    .output-title {
+        font-size: 36px;
+    }
+} */
+
+
+/* ```css */
+/* Import fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Root variables for consistent theming */
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #34D399;
+    --accent-color: #F59E0B;
+    --dark-bg: #1F2937;
+    --light-text: #0a0a0a;
+    --dark-text: #111827;
+    --success-color: #10B981;
+    --warning-color: #F59E0B;
+    --error-color: #EF4444;
+    --gradient-start: #4A90E2;
+    --gradient-end: #34D399;
+}
+
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #111827 100%);
+    color: var(--light-text);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Main Title Styling */
+.main-title {
+    font-family: "Poiret One", sans-serif;
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 2rem 0;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Styling */
+[data-testid='stSidebar'] {
+    background: rgba(31, 41, 55, 0.95);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-testid='stSidebar'] [data-testid='stHeading'] h1 {
+    font-family: "Poiret One", sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1.5rem 0;
+    border-bottom: 2px solid rgba(74, 144, 226, 0.2);
+}
+
+/* Form Elements Styling */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea {
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--light-text);
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Labels and Helper Text */
+.stTextInput p,
+.stTextArea p,
+.stSelectbox p,
+.stMultiSelect p {
+    color: var(--light-text);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.input-example {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+/* Lead Score Cards */
+.lead-score-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.lead-score-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Action Buttons */
+.stButton > button {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+/* Results Section */
+.output-title {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+/* Status Indicators */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-badge.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+}
+
+.status-badge.warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--warning-color);
+}
+
+.status-badge.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--error-color);
+}
+
+/* Analytics Section */
+.analytics-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.analytics-metric {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    [data-testid='stSidebar'] [data-testid='stHeading'] h1 {
+        font-size: 1.5rem;
+    }
+
+    .analytics-card {
+        padding: 1rem;
+    }
+
+    .analytics-metric {
+        font-size: 1.5rem;
+    }
+}
+
+/* Loading States */
+.stSpinner {
+    border-color: var(--primary-color);
+}
+
+/* Tooltips */
+.tooltip {
+    background: rgba(31, 41, 55, 0.95);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: rgba(31, 41, 55, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+}
+
+/* Add to your src/css/style.css */
+
+/* Sidebar Styling */
+[data-testid="stSidebar"] {
+    background-color: #1E293B;
+    padding: 2rem 1rem;
+}
+
+/* Sidebar Title */
+[data-testid="stSidebar"] .sidebar-title {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Sidebar Subheader */
+[data-testid="stSidebar"] [data-testid="stMarkdown"] h2,
+[data-testid="stSidebar"] .stMarkdown h3 {
+    color: #E2E8F0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Sidebar Text */
+[data-testid="stSidebar"] [data-testid="stMarkdown"] p {
+    color: #CBD5E0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Sidebar Metrics */
+[data-testid="stSidebar"] [data-testid="stMetricValue"] {
+    color: #4A90E2;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+[data-testid="stSidebar"] [data-testid="stMetricLabel"] {
+    color: #E2E8F0;
+    font-size: 0.9rem;
+}
+
+/* Sidebar Links */
+[data-testid="stSidebar"] a {
+    color: #4A90E2;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+[data-testid="stSidebar"] a:hover {
+    color: #34D399;
+}
+
+/* Sidebar Buttons */
+[data-testid="stSidebar"] .stButton button {
+    background: rgba(74, 144, 226, 0.1);
+    color: #E2E8F0;
+    border: 1px solid rgba(74, 144, 226, 0.2);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+[data-testid="stSidebar"] .stButton button:hover {
+    background: rgba(74, 144, 226, 0.2);
+    border-color: rgba(74, 144, 226, 0.3);
+}
+
+/* Sidebar Expander */
+[data-testid="stSidebar"] .streamlit-expanderHeader {
+    color: #E2E8F0;
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+}
+
+/* Sidebar Metrics Container */
+.sidebar-metrics {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+/* Sidebar History Items */
+.history-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.history-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ```
+
+Key improvements:
+1. Modern gradient effects
+2. Sleek, minimalist design
+3. Improved readability
+4. Consistent color scheme
+5. Smooth transitions and animations
+6. Better form element styling
+7. Responsive design
+8. Professional typography
+9. Enhanced visual hierarchy
+10. Interactive elements
+
+Features:
+1. Custom form styling
+2. Lead score cards
+3. Status indicators
+4. Analytics sections
+5. Loading states
+6. Tooltips
+7. Responsive footer
+8. Sidebar customization
+9. Interactive buttons
+10. Helper text styling
+
+Would you like me to:
+1. Add more interactive elements?
+2. Create additional card designs?
+3. Include more animations?
+4. Add dark/light mode toggle? */

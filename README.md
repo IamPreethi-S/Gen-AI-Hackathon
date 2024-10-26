@@ -1,2 +1,1 @@
-# Gen AI Hackathon
- Gen AI Hackathon
+# GenAI Hackathon
